@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>affar.tn</title>
+<link rel="stylesheet" href="static/admin_static/style_login_2.css" >
+</head>
+<body>
+    
+    {% include 'admin/includes/_flashmsg.html' %}
+
+<header>
+<div class="row">
+<div class="logo">
+<img src="static/admin_static/image/national.png">
+</div>
+</div>
+</header>
+<div class="box">
+<h2>Login</h2>
+<form role="form" action="" method="POST">
+<div class="inputBox">
+    {{form.csrf_token}}
+                                
+    {{ form.email(class_="form-control",placeholder="E-mail") }}
+       {% for error in form.email.errors %}
+       {% endfor %}
+
+</div>
+<div class="inputBox">
+    {{form.csrf_token}}
+                                
+    {{ form.password(class_="form-control",placeholder="Password") }}
+</div>
+
+<input type="submit" name="" value="Connecter">
+
+</form>
+</div>
+</body>
+</html>

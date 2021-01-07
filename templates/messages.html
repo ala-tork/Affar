@@ -1,0 +1,35 @@
+{% block body %}
+<html>
+    {% include 'template.html' %}
+    
+</div>
+
+<div class="container topMargin" style="margin-bottom: 90px;">
+    {% for p in result %}
+	<div class="mega-block">
+		<div class="big-block-gauche">
+            {% from "includes/_formhelpers.html" import render_field %}
+		<H1>Envoyez un message à "{{p.pseudo}}"</H1>
+		<p>
+		Pensez à indiquer vos coordonnées téléphoniques pour que l'annonceur puisse vous contacter facilement. Tout démarchage publicitaire ou spamming sera éliminé.
+		</p>
+		<form method="POST">
+            {{form.msg.label}}
+            <br>
+            {{form.msg(cols="70", rows="10")}}
+            <br> <br> <br>
+			<input type="hidden" name="md5" value="00a533e4483ddab04d8a2a74b794b4da">
+			<input type="hidden" name="action" value="1">
+			<input type="submit" value="Envoyez" class="blueBtn">
+		</form>
+		</div>
+	</div>
+    {% endfor %}
+</div>
+</body>
+
+
+    {% include 'footer.html' %}
+{% endblock %}
+
+</html>

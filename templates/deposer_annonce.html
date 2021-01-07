@@ -1,0 +1,115 @@
+{% block body %}
+{% include 'template.html' %}
+<html>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    {{ dropzone.load_css() }}
+    {{ dropzone.style('border: 2px dashed #0087F7; margin: 10px 0 10px; min-height: 100px; width: 800px') }}
+
+    <div class="container topMargin" style="margin-bottom: 90px;">
+        <H1>Déposer une annonce</H1>
+        <form action="{{ url_for('handle_form') }}" enctype="multipart/form-data" method="post">
+                    {{form.csrf_token}}
+                    {{ form.titre.label }}
+                    {% for error in form.titre.errors %}
+                    <p style="color: firebrick;"> {{ error }}</p>
+                    {% endfor %} 
+                    {{ form.titre(class_="inputbox") }}
+                    {{ form.categorie.label }}
+                    {{ form.categorie(class_="inputbox") }}
+                    {{ form.description.label }}
+                    {{ form.description(class_="textbox") }}
+                    {{ form.prix.label }}
+                                   
+            
+            <div class="info">
+            Le prix doit contenir un nombre entier pas de virgule, ni de points.					</div>
+                    {{ form.prix(class_="inputbox price") }} <b>TND</b><br>
+                                 
+            <label>Numéro de téléphone :</label>
+            {{ form.phone(class_="inputbox") }}
+           
+            <b>Photos :</b> Une annonce avec photo est 7 fois plus consultée qu'une annonce sans photo<br><br>
+            
+            {{ dropzone.create() }}
+            
+            <input type="submit" id="upload" value="Upload Images" formaction="{{ url_for('handle_upload') }}">
+
+            <br>
+
+            {{ form.ville.label }}
+            {{ form.ville(class_="inputbox") }}
+          
+            <div style="margin-top:10px;margin-bottom:10px;">
+            
+            <input type="submit" id="submit" value="Valider" class="btnConfirm">
+            <script>
+
+
+
+            </script>
+            </div>
+        </form>
+    </div>
+   
+{{ dropzone.load_js() }}
+
+{{ dropzone.config(custom_init='dz = this;
+  $("#submit").click(function(event){
+    if (document.getElementById("upload").disabled == false) {
+      if((dz.files.length) == 0){
+        alert("Choisir des images s il vous plait ");
+        event.preventDefault();
+        
+      }
+      else if (dz.getUploadingFiles().length === 0 && dz.getQueuedFiles().length === 0) {
+        
+      }
+      else{
+        alert("il faut uploader au minimum 2 images");
+        event.preventDefault();
+      }
+    }
+ 
+});
+
+  $("#upload").click(function(event){
+  if((dz.files.length) < 2){
+    event.preventDefault();
+      alert("Ajouter au Mininum 2 Images");
+     
+      
+  }
+ 
+  else{
+    document.getElementById("upload").addEventListener("click", function handler(e) {
+        e.currentTarget.removeEventListener(e.type, handler);
+        e.preventDefault();
+        e.stopPropagation();
+        dz.processQueue();
+        document.getElementById("upload").disabled = true
+    });
+    this.on("queuecomplete", function(file) {
+        // Called when all files in the queue finish uploading.
+        e.preventDefault();
+        document.getElementById("upload").click();
+
+    }); 
+   
+
+  }
+  
+}); ',
+                     custom_options=' addRemoveLinks: true ,uploadMultiple: true, url: "/upload",autoProcessQueue: false,parallelUploads:5') }}
+
+
+
+{% include 'footer.html' %}
+{% endblock %}
+<!-- Mirrored from www.shua-creation.com/clone/pas/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Nov 2020 18:37:49 GMT -->
+</html>
+

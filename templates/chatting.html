@@ -1,0 +1,94 @@
+{% block body %}
+<html>
+    {% include 'template.html' %}
+    
+</div>
+
+<script>
+    function ajax(){
+
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function(){
+    if(req.readyState == 4 && req.status == 200)
+    {
+    document.getElementById('chats').innerHTML = req.responseText;
+    }
+    }
+    req.open('POST', '/discussion', true);
+    req.send();
+    }
+    setInterval(function(){ajax()}, 1000);
+</script>
+<div class="row" onload="ajax();">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-4" style="background-color: #f5f5f5;margin: 0px 10px;border-radius: 4px; padding: 10px 20px 20px 20px;">
+        <div style="text-align: center;font-size: 18px;background-color: #ddd;border-radius: 4px;color: #5e5fa4;margin-bottom: 8px;">
+            <span>Users Chart</span>
+        </div>
+        <ul class="list-group">
+            {% for user in users %}
+                {% if user.id != session.id %}
+                    <li class="list-group-item"><a href="{{user.id}}"> {{user.pseudo}} </a>
+                        
+                            <span style="height: 12px;width: 12px;background-color: #1fc124;border-radius: 6px;
+                            float: right;margin-top: 5px;"></span>
+                       
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-xs-6" style="background-color: #f5f5f5;margin: 0px 10px;border-radius: 4px; padding: 10px 20px 20px 20px;">
+
+        {% if session.lid %}
+            {% if session.name != session.s_pseudo %}
+                <div style="text-align: center;font-size: 18px; color: #22aa45;background-color: #ddd;border-radius: 4px;">
+                    <span>{{ session.name}}</span>
+                </div>
+                <div id="chat-box" style="overflow-y: scroll; height: 450px; width: 500px; padding: 10px 0px 0px 0px;">
+                    <div id="chats"></div>
+                </div>
+                {% from "includes/_formhelpers.html" import render_field %}
+                <div>
+                    <form method="POST" action="">
+                    <div class="form-group">
+                        {{render_field(form.body, class_="form-control", value="", placeholder="Enter your text...")}}
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right">Send</button>
+                    </form>
+                </div>
+            {% else %}
+            <div style="text-align: center;font-size: 18px; color: #f12929;background-color: #ddd;border-radius: 4px;">
+                <span>Bienvenue sur votre messagerie</span>
+            </div>
+            <div id="chat-box" style="overflow-y: scroll; height: 450px; width: 500px; padding: 10px 0px 0px 0px;">
+                
+            </div>
+         
+            <div>
+              
+                <div class="form-group">
+                    <p class="lead" >Select users and start chat...</p>
+                </div>
+                
+                
+            </div>
+            {% endif %}
+        {% endif %}
+
+    </div>
+    <div class="col-xs-1"></div>
+</div>
+
+
+
+
+
+</div>
+</body>
+
+
+    {% include 'footer.html' %}
+{% endblock %}
+
+</html>

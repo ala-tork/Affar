@@ -1,0 +1,61 @@
+{% block body %}
+<html>
+    {% include 'template.html' %}
+    
+</div>
+<div class="container topMargin" style="margin-bottom: 90px;">
+	
+	<H1>Mes Annonces</H1>
+	<p>Retrouvez l'ensemble de vos annonces postées sur le site, vous pouvez les supprimer une fois vendues.</p>
+	
+<table>
+<tr>
+<th>Posté le</th>
+<th>Photo</th>
+<th>Titre</th>
+<th>Valider</th>
+<th style="width: 190px;">Action</th>
+</tr>
+{% if result %}
+{% for p in result %}
+<tr>
+	<td>{{p.date_ajout}}</td>
+	<td><img  src="../static/uploads/{{p.source}}" style="width:80px; height: 50px;"> </td>
+	<td>{{p.title}}</td>
+	{% if p.etat==1 %}
+	<td><b><font color=green>Oui</font></b></td>
+	{% else %}
+	<td><b><font color=red>Non</font></b></td>
+	{% endif %}
+	<td>
+		<a href="javascript:void(0);" onclick="showOption('{{p.id_produit}}');" class="btnConfirm">Plus d'options</a><div class="more_option_action" id="more_option_action-{{p.id_produit}}"><div class="item_option"><a href="/Delete_Product_client?id={{ p.id_produit }}">Supprimer</a></div><div class="item_option"><a href="/edit_Product_client?id={{p.id_produit}}">Modifier</a></div><div class="item_option"><a href="showannonce.php?md5=936ebde1dda7834153d7b0870c9f61b9">Voir l'annonce</a></div></div>
+	</td>
+</tr>
+{% endfor%}
+{% endif %}
+</table>
+
+</div>
+<script>
+function showOption(id)
+{
+	if($('#more_option_action-'+id).css('display') == 'none')
+	{
+		$('#more_option_action-'+id).css('display','block');
+	}
+	else
+	{
+		$('#more_option_action-'+id).css('display','none');
+	}
+}
+</script>
+
+
+</div>
+</body>
+
+
+    {% include 'footer.html' %}
+{% endblock %}
+
+</html>

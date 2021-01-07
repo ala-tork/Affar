@@ -1,0 +1,94 @@
+{% block body %}
+<html>
+    {% include 'template.html' %}
+	
+	
+</div>
+<div class="container topMargin">
+	<div class="ads728">
+	</div>
+	<H1>Annonces : Offres</H1>
+	<div class="search-section-box">
+		<div class="search-input">
+			<form>
+				<input class="searchtext" type="text" name="searchtext" value="" placeholder="Que recherchez-vous ?">
+				<select name="categorie" id="categorie" onchange="checkCategorie();" class="categorybox">
+				<option value="0" selected>Toutes les catégories</option>
+<option value="69" disabled style="background-color:#aaaaaa;color:#ffffff;">AUTRES</option>
+<option value="70">Autres</option>
+<option value="1" disabled style="background-color:#aaaaaa;color:#ffffff;">Emploi</option>
+<option value="76">Occasions</option>
+<option value="2">Offres d'emploi</option>
+<option value="12" disabled style="background-color:#aaaaaa;color:#ffffff;">IMMOBILIER</option>
+
+				</select>
+				<select name="departement" class="categorybox"><option value="">Toutes la France</option>
+<option value="01">01 - Ain</option>
+<option value="02">02 - Aisne</option>
+<option value="03">03 - Allier</option>
+
+</select>
+				<select name="tri" class="categorybox"><option value="plus_recente">Tri : Plus récentes</option><option value="plus_ancienne">Tri : Plus ancienne</option><option value="prix_croissant">Tri : Prix croissants</option><option value="prix_decroissant">Tri : Prix décroissants</option></select>
+				<input type="submit" value="Rechercher" class="blueBtn nodisplay searchIcon">
+				<div id="filtre">
+				</div>
+			</form>
+		</div>
+	</div>
+	<script>
+	function checkCategorie()
+	{
+		var categorie = $('#categorie').val();
+		$('#filtre').load('module/checkOffre.php?categorie='+categorie);
+	}
+	</script>
+	{% if result %}
+	{% for p in result %}
+	
+	<a href="/offre?view={{p.id_produit}}" class="linkoffre">	
+		<div class="block-annonce">			
+				<div class="photo">	
+						<img src="../static/uploads/{{p.source}}">		
+							<div class="nbr-photo"></div>	
+							</div>		
+							<div class="text-block-annonce">	
+							<div class="title-block-annonce">{{p.title}}</div>
+							<div>			Téléphonie<br>			Alsace		</div>
+							<div class="prix-block-annonce">{{p.prix}} DT</div>		</div>	
+							<div class="date-depot-annonce">{{p.date_ajout}}</div>
+							</div></a>
+							<div class="favoris-block-annonce">
+								<img src="https://www.shua-creation.com/clone/pas/images/coeur-vide.png" id="favoris-936ebde1dda7834153d7b0870c9f61b9" title="Mettre en favoris" onclick="addFavoris('936ebde1dda7834153d7b0870c9f61b9');">
+							</div>
+		{% endfor%}
+		{% endif %}							
+
+
+
+
+	<div class="paging">
+<a href="offre.php?page=0&categorie=&searchtext=&departement=&tri=plus_recente&codepostal=&region=" class="paging-blue"><</a><a href="offre.php?page=0&categorie=&searchtext=&departement=&tri=plus_recente&codepostal=&region=" class="paging-blue pageselected">1</a>
+<a href="offre.php?page=1&categorie=&searchtext=&departement=&tri=plus_recente&codepostal=&region=" class="paging-blue">></a></div>
+
+</div>
+<script>
+function addFavoris(md5)
+{
+	document.location.href = 'https://www.shua-creation.com/clone/pas/addfavoris.php?md5='+md5;
+}
+
+function removeFavoris(md5)
+{
+	document.location.href = 'https://www.shua-creation.com/clone/pas/removefavoris.php?md5='+md5;
+}
+</script>
+
+
+</div>
+</body>
+
+
+    {% include 'footer.html' %}
+{% endblock %}
+
+</html>

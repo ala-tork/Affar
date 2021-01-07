@@ -1,0 +1,31 @@
+{% block body %}
+<html>
+    {% include 'template.html' %}
+    
+</div>
+<div class="container topMargin">
+<H1>Connectez vous à votre compte</H1>
+
+<form method="POST" action="">
+    {{form.csrf_token}}
+    {{ form.email(class_="inputbox") }}
+    {{ form.password(class_="inputbox") }}
+    <div class="login-btn-connexion">
+        <input type="hidden" name="action" value="1">
+        <input type="submit" value="Se Connecter" class="btnConfirm">
+        <button onclick="location.href='subscribe'" class="btnConfirm">Créer un compte gratuitement</button>
+    </div>
+</form>
+<div class="englobe-line-separator ctCenter">
+</div>
+
+ 
+
+</div>
+</body>
+
+
+    {% include 'footer.html' %}
+{% endblock %}
+
+</html>

@@ -1,0 +1,192 @@
+
+{% block body %}
+<html>
+	{% include 'template.html' %}
+	
+	<div id="content">
+	
+</div>
+<style>
+.habillage
+{
+	position: absolute;
+	z-index: -1;
+	text-align: center;
+	background: url('images/5c8512809cf1e0dc0d08fa9428a2e877jpg.html') no-repeat center top;
+	width: 100%;
+}
+</style>
+<div class="habillage">
+</div>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main1.css') }} ">
+<div class="bighome">
+	<div class="bighome-titre"></div>
+	<div class="bighome-search">
+		<form method="POST" action="#">
+			<input type="text" name="searchtext" placeholder="Votre recherche" class="bighome-input-search">
+			<select name="categorie" class="bighome-input">
+				<option value="0">Toutes les catégories</option>
+				<option value="37" disabled style="background-color:#aaaaaa;color:#ffffff;">MULTIMEDIA</option>
+				<option value="39">Consoles & Jeux vidéo</option>
+				<option value="40">Image & Son</option>
+				<option value="38">Informatique</option>
+				<option value="41">Téléphonie</option>
+			</select>
+<button class="bighome-btn">
+	<i class="fas fa-search"></i>Rechercher
+</button>
+</form>
+</div>
+<img src="static/images/rue.jpg">
+</div>
+<div class="container">
+</div>
+
+
+<div class="bluecolor">
+	<div class="container">
+		<div class="title-depot-annonce">Déposez dès maintenant votre annonce !</div>
+		<div class="btn-depot-annonce"><a href="deposer-une-annonce.html"><i class="fas fa-plus-circle"></i> Publier une annonce</a></div>
+	</div>
+</div>
+<div class="categorieshow">
+	<center><H2>LES CATEGORIES</H2></center>
+	<div class="container" style="overflow: auto;margin-bottom: 20px;">
+<div class="col4">
+<div class="col-categorie">
+<div class="pictogram-categorie"></div>
+<H3>Emploi</H3>
+<ul>
+<li><a href="offreae7b.html?categorie=2">Offres d'emploi</a></li>
+<li><a href="offree13c.html?categorie=76">Occasions</a></li>
+</ul>
+</div>
+<div class="col-categorie">
+<div class="pictogram-categorie"></div>
+<H3>VEHICULES</H3>
+<ul>
+<li><a href="#">Voitures</a></li>
+<li><a href="#">Motos</a></li>
+<li><a href="#">Caravaning</a></li>
+<li><a href="#">Utilitaires</a></li>
+<li><a href="#">Equipement Auto</a></li>
+<li><a href="#">Equipement Moto</a></li>
+<li><a href="#">Equipement Caravaning</a></li>
+<li><a href="#">Nautisme</a></li>
+</ul>
+</div>
+<div class="col-categorie">
+<div class="pictogram-categorie"></div>
+<H3>IMMOBILIER</H3>
+<ul>
+<li><a href="#">Ventes immobilières</a></li>
+<li><a href="#">Locations</a></li>
+<li><a href="#">Colocations</a></li>
+<li><a href="#">Bureaux & Commerces</a></li>
+</ul>
+</div>
+</div>
+<div class="col4">
+<div class="col-categorie">
+<div class="pictogram-categorie"></div>
+<H3>VACANCES</H3>
+<ul>
+<li><a href="#">Locations & Gîtes</a></li>
+<li><a href="#">Chambres d'hôtes</a></li>
+<li><a href="#">Campings</a></li>
+<li><a href="#">Hôtels</a></li>
+<li><a href="#">Hébergements insolites</a></li>
+</ul>
+</div>
+<div class="col-categorie">
+<div class="pictogram-categorie"></div>
+<H3>MAISON</H3>
+<ul>
+<li><a href="#">Ameublement</a></li>
+<li><a href="#">Electroménager</a></li>
+<li><a href="#">Arts de la table</a></li>
+<li><a href="#">Décoration</a></li>
+<li><a href="#">Linge de maison</a></li>
+<li><a href="#">Bricolage</a></li>
+<li><a href="#">Jardinage</a></li>
+<li><a href="#">Vêtements</a></li>
+<li><a href="#">Chaussures</a></li>
+<li><a href="#">Accessoires & Bagagerie</a></li>
+<li><a href="#">Montres & Bijoux</a></li>
+<li><a href="#">Equipement bébé</a></li>
+<li><a href="#">Vêtements bébé</a></li>
+</ul>
+</div>
+<div class="col-categorie">
+<div class="pictogram-categorie"></div>
+<H3>MULTIMEDIA</H3>
+<ul>
+<li><a href="offre57f2.html?categorie=38">Informatique</a></li>
+<li><a href="offre57ec.html?categorie=39">Consoles & Jeux vidéo</a></li>
+<li><a href="offre39ef.html?categorie=41">Téléphonie</a></li>
+</ul>
+</div>
+</div>
+<div class="col4">
+<div class="col-categorie">
+<div class="pictogram-categorie"></div>
+<H3>LOISIRS</H3>
+<ul>
+<li><a href="#">DVD / Films</a></li>
+<li><a href="#">CD / Musique</a></li>
+<li><a href="#">Livres</a></li>
+<li><a href="#">Animaux</a></li>
+<li><a href="#">Vélos</a></li>
+<li><a href="#">Sports & Hobbies</a></li>
+<li><a href="#">Instruments de musique</a></li>
+<li><a href="#">Collection</a></li>
+<li><a href="#">Jeux & Jouets</a></li>
+<li><a href="#">Vins & Gastronomie</a></li>
+</ul>
+</div>
+<div class="col-categorie">
+<div class="pictogram-categorie"></div>
+<H3>MATERIEL PROFESSIONNEL</H3>
+<ul>
+<li><a href="#">Matériel Agricole</a></li>
+<li><a href="#">Transport - Manutention</a></li>
+<li><a href="#">BTP - Chantier Gros-oeuvre</a></li>
+<li><a href="#">Outillage - Matériaux 2nd-oeuvre</a></li>
+<li><a href="#">Équipements Industriels</a></li>
+<li><a href="#">Restauration - Hôtellerie</a></li>
+<li><a href="#">Fournitures de Bureau</a></li>
+<li><a href="#">Commerces & Marchés</a></li>
+<li><a href="#">Matériel Médical</a></li>
+</ul>
+</div>
+</div>
+<div class="col4">
+<div class="col-categorie">
+<div class="pictogram-categorie"></div>
+<H3>SERVICES</H3>
+<ul>
+<li><a href="#">Prestations de services</a></li>
+<li><a href="#">Billetterie</a></li>
+<li><a href="#">Evénements</a></li>
+<li><a href="#">Cours particuliers</a></li>
+<li><a href="#">Covoiturage</a></li>
+</ul>
+</div>
+<div class="col-categorie">
+<div class="pictogram-categorie"></div>
+<H3>AUTRES</H3>
+<ul>
+<li><a href="#">Autres</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<!--End of Tawk.to Script--></body>
+{% include 'footer.html' %}
+{% endblock %}
+<!-- Mirrored from www.shua-creation.com/clone/pas/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Nov 2020 18:37:49 GMT -->
+</html>

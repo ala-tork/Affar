@@ -1,0 +1,350 @@
+.bighome
+{
+	width: 100%;
+	position: relative;
+}
+
+.bighome img
+{
+	width: 100%;
+	height: auto;
+}
+
+.bighome-titre
+{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 28px;
+	padding-top: 222px;
+	color: #fff;
+	text-shadow: 1px 2px 2px #000;
+}
+
+.bighome-search
+{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	margin-top: 283px;
+}
+
+.bighome-input-search
+{
+	height: 31px;
+	padding-left: 10px;
+	width: 25%;
+	border-radius: 5px;
+	border: 1px solid #959595;
+	margin-right: 5px;
+}
+
+.bighome-input
+{
+	height: 35px;
+	padding-left: 10px;
+	width: 25%;
+	border-radius: 5px;
+	border: 1px solid #959595;
+	margin-right: 5px;
+}
+
+.bighome-btn 
+{
+    background-color: #ff820e;
+    border: none;
+    padding: 9px;
+    margin-left: 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bighome-btn:hover 
+{
+	background-color: #d96e0a;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 1550px)
+{
+	.bighome-titre 
+	{
+		padding-top: 179px;
+	}
+	
+	.bighome-search 
+	{
+		margin-top: 243px;
+	}
+}
+
+@media screen and (max-width: 1450px)
+{
+	.bighome-titre 
+	{
+		font-size: 28px;
+		padding-top: 164px;
+	}
+	
+	.bighome-search 
+	{
+		margin-top: 225px;
+	}
+}
+
+@media screen and (max-width: 1180px)
+{
+	.bighome-titre 
+	{
+		font-size: 24px;
+		padding-top: 109px;
+	}
+	
+	.bighome-search 
+	{
+		margin-top: 165px;
+	}
+}
+
+@media screen and (max-width: 1023px)
+{
+	.bighome 
+	{
+		width: 100%;
+		overflow: hidden
+	}
+	
+	.bighome img 
+	{
+		width: 200%;
+		margin-left: -383px;
+	}
+	
+	.bighome-titre 
+	{
+		font-size: 27px;
+		padding-top: 200px;
+	}
+	
+	.bighome-search 
+	{
+		margin-top: 255px;
+	}
+	
+	.bighome-input-search 
+	{
+		width:35%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+	
+	.bighome-input 
+	{
+		width:35%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+}
+
+@media screen and (max-width: 960px)
+{
+	.bighome 
+	{
+		width: 100%;
+		overflow: hidden
+	}
+	
+	.bighome img 
+	{
+		width: 200%;
+		margin-left: -383px;
+	}
+	
+	.bighome-titre 
+	{
+		font-size: 27px;
+		padding-top: 200px;
+	}
+	
+	.bighome-search 
+	{
+		margin-top: 255px;
+	}
+	
+	.bighome-input-search 
+	{
+		width:35%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+	
+	.bighome-input 
+	{
+		width:35%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+}
+
+@media screen and (max-width: 640px)
+{
+	.bighome 
+	{
+		width: 100%;
+		overflow: hidden
+	}
+	
+	.bighome img 
+	{
+		width: 250%;
+		margin-left: -374px;
+	}
+	
+	.bighome-titre 
+	{
+		font-size: 25px;
+		padding-top: 136px;
+	}
+	
+	.bighome-search 
+	{
+		margin-top: 218px;
+	}
+	
+	.bighome-input-search 
+	{
+		width:90%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+	
+	.bighome-input 
+	{
+		width:90%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+	.bighome 
+	{
+		width: 100%;
+		overflow: hidden
+	}
+	
+	.bighome img 
+	{
+		width: 250%;
+		margin-left: -374px;
+	}
+	
+	.bighome-titre 
+	{
+		font-size: 19px;
+		padding-top: 103px;
+	}
+	
+	.bighome-search 
+	{
+		margin-top: 166px;
+	}
+	
+	.bighome-input-search 
+	{
+		width:90%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+	
+	.bighome-input 
+	{
+		width:90%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+}
+
+@media screen and (max-width: 372px)
+{
+	.bighome 
+	{
+		width: 100%;
+		overflow: hidden
+	}
+	
+	.bighome img 
+	{
+		width: 250%;
+		margin-left: -265px;
+	}
+	
+	.bighome-titre 
+	{
+		font-size: 16px;
+		padding-top: 65px;
+	}
+	
+	.bighome-search 
+	{
+		margin-top: 119px;
+	}
+	
+	.bighome-input-search 
+	{
+		width:90%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+	
+	.bighome-input 
+	{
+		width:90%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+}
+
+@media only screen and (max-width: 320px) 
+{
+	.bighome 
+	{
+		width: 100%;
+		overflow: hidden
+	}
+	
+	.bighome img 
+	{
+		width: 250%;
+		margin-left: -265px;
+	}
+	
+	.bighome-titre 
+	{
+		font-size: 16px;
+		padding-top: 65px;
+	}
+	
+	.bighome-search 
+	{
+		margin-top: 119px;
+	}
+	
+	.bighome-input-search 
+	{
+		width:90%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+	
+	.bighome-input 
+	{
+		width:90%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+}

@@ -1,0 +1,135 @@
+{% block body %}
+<html>
+    {% include 'template.html' %}
+    
+</div>
+
+
+<div class="container topMargin" style="margin-bottom: 90px;">
+    <div class="nav">
+        <a href="https://www.shua-creation.com/clone/pas">Accueil</a> > <a href="https://www.shua-creation.com/clone/pas/offre.php">Offres</a> > <a href="https://www.shua-creation.com/clone/pas/offre.php">Toutes la France</a> > <a href="https://www.shua-creation.com/clone/pas/offre.php?departement=TN"></a> > <a href="https://www.shua-creation.com/clone/pas/offre.php?categorie=38">Informatique</a> > <a href="https://www.shua-creation.com/clone/pas/showannonce.php?md5=1917ffa435b73116c19560fc72f72248">pc portable</a>
+    </div>
+    {% for p in offres %}
+    {% for u in userss %}
+    <div class="mega-block">
+        <div class="big-block-gauche">
+            <h1>{{p.title}}</h1>
+            {% for img in images %}
+            {% if img.premier == 1 %}
+            <div class="big-block-photo">
+                <img id="big-image-block" style="width: 500px; height: 300px;" src="../static/uploads/{{img.source}}">
+            </div>
+            {% endif %}
+            {% endfor%}
+            <br>
+            <br>
+            <div class="block-selection-image">
+              
+            {% for img in images %}
+           
+            
+            <div class="miniImage" id="id-{{images|length}}" onclick="showBigImage('../static/uploads/{{img.source}}',' {{images|length}}');" style="border: 2px solid rgb(255, 135, 0) ;" >
+            <img src="../static/uploads/{{img.source}}" style="width: 150px; height: 120px;"></div>
+          
+            {% endfor%}
+            </div>
+            <br>
+            <div class="mise-en-ligne">
+                <div class="mise-en-ligne-text">Mise en ligne {{p.date_ajout}}</div>
+                <div class="nombre-de-vue"><img src="https://www.shua-creation.com/clone/pas/images/view-icon.png" title="Nombre de vue" alt="Nombre de vue">2</div>
+            </div>
+            <br>
+            <div class="information">
+                <div class="information-title">
+                Prix
+                </div>
+                <div class="other-information">
+                    {{p.prix}} DT
+                </div>
+                <div class="information-title">
+                Ville
+                </div>
+                <div class="other-information">
+                    {{p.ville}}
+                </div>
+            </div>
+            <div class="block-description">
+            
+            </div>
+            <div class="block-description">
+                <b>Description :</b>
+                <br><br>
+                {{p.description}}
+            </div>
+            
+          
+          
+        </div>
+        <div class="big-block-droit">
+            <div class="username-block-droit"><b>{{u.pseudo}}</b></div>
+            <div class="phone-number-block">
+<a href="javascript:void(0);" id="btnPhone" onclick="showNumberPhone();" class="orangBtn phone-icon block-full-btn">Voir le numéro</a>
+<div id="phone-number" style="display:none;">
+<a href="tel:{{p.numero}}">{{p.numero}}</a>
+</div>
+</div>
+<div class="send-message-block">
+    <form action="https://apipartner.obvy-app.com/api/payment?api_key=" method="post" accept-charset="UTF-8" target="_blank">
+        <input type="hidden" name="amount" value="1500">
+        <input type="hidden" name="item_name" value="pc portable">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="locale" value="FR">
+        <input type="hidden" name="seller_email" value="saifnacer4@gmail.com">
+        <input type="hidden" name="url_return" value="https://www.shua-creation.com/clone/pas/showannonce.php?md5=1917ffa435b73116c19560fc72f72248&valid=1">
+        <input type="hidden" name="url_cancel" value="https://www.shua-creation.com/clone/pas/showannonce.php?md5=1917ffa435b73116c19560fc72f72248&error=1">
+        
+    </form>
+</div>
+        {% if u.id != session.id  %}
+            <div class="send-message-block">
+                <a href="/chats?message={{u.id}}" class="blueBtn message-icon">Envoyez un message</a>
+                <br>
+                {% else %}
+            <div class="send-number-block">
+                <a href="/edit_Product_client?id={{p.id_produit}}" class="btn btn-info btn-block">Modifier l'announce</a>
+            </div>
+                <br>
+                
+            <div class="send-number-block">
+                <a href="/Delete_Product_client?id={{ p.id_produit }}" class="btn btn-secondary btn-block ">Supprimer l'announce</a>
+            </div>
+            {% endif %}
+            </div>
+            
+        </div>
+        
+    </div>
+    {% endfor%}
+    {% endfor%}
+  
+    <script>
+    var oldid = 0;
+    function showBigImage(url,x)
+    {
+        $('#id-'+oldid).css('border','0px solid #000000');
+        $('#id-'+x).css('border','2px solid rgb(255, 135, 0)');
+        $('#big-image-block').prop('src',url);
+        oldid = x;
+    }
+    
+    function showNumberPhone()
+    {
+        $('#btnPhone').css('display','none');
+        $('#phone-number').css('display','block');
+    }
+    </script>
+
+
+</div>
+</body>
+
+
+    {% include 'footer.html' %}
+{% endblock %}
+
+</html>

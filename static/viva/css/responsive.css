@@ -1,0 +1,843 @@
+@media only screen and (max-width: 1024px) 
+{
+	.container 
+	{
+		box-sizing: border-box;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.btnCenterTwo
+	{
+		overflow: auto;
+		width: 357px;
+		margin-left: auto;
+		margin-right: auto;
+		height: 44px;
+		padding-top: 12px;
+	}
+
+	.subscribeBtnConnect
+	{
+		float:left;
+	}
+}
+
+@media only screen and (max-width: 1023px) 
+{
+	.container 
+	{
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.btnCenterTwo 
+	{
+		width: auto;
+		margin-left: 0px;
+		margin-right: 0px;
+		height: auto;
+		padding-top: 0px;
+		overflow: inherit;
+	}
+	
+	.subscribeBtnConnect
+	{
+		float:none;
+		margin-bottom:25px;
+	}
+	
+	.vignette-urgente
+	{
+		width:180px;
+	}
+	
+	.vignette-urgente img
+	{
+		width:100%;
+		height:auto;
+	}
+	
+	.float-bar-social
+	{
+		display:none;
+	}
+	
+	.btnConfirm
+	{
+		width: 100%;
+	}
+	
+	.boxsubscribe-login 
+	{
+		float:none;
+		margin-top: 0px;
+		text-align: initial;
+	}
+	
+	.btn-separate-login
+	{
+		float:none;
+		margin-right:0px;
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	
+	.nav
+	{
+		font-size: 18px;
+		text-align: center;
+	}
+	
+	.big-block-gauche 
+	{
+		float: none;
+		width: 90%;
+		margin:5%;
+	}
+	
+	.big-block-droit 
+	{
+		float: none;
+		width: 90%;
+		margin:5%;
+	}
+	
+	.logo 
+	{
+		float: none;
+		padding-top: 8px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.menuMobile
+	{
+		display:block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.user
+	{
+		display:none;
+	}
+	
+	.menu
+	{
+		display:none;
+	}
+	
+	.homeboxleft 
+	{
+		float: none;
+		width: 90%;
+		margin: 5%;
+	}
+	
+	.homeboxcenter 
+	{
+		float: none;
+		width: 90%;
+		margin: 5%;
+	}
+	
+	.homeboxrigth
+	{
+		display:none;
+	}
+	
+	.col3,.col2,.col1,.col4
+	{
+		width: 100%;
+		text-align: center;
+	}
+	
+	.block-annonce 
+	{
+		padding:20px;
+	}
+}
+
+@media only screen and (max-width: 960px) 
+{
+	.container 
+	{
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.btnCenterTwo 
+	{
+		width: auto;
+		margin-left: 0px;
+		margin-right: 0px;
+		height: auto;
+		padding-top: 0px;
+		overflow: inherit;
+	}
+	
+	.subscribeBtnConnect
+	{
+		float:none;
+		margin-bottom:25px;
+	}
+	
+	.vignette-urgente
+	{
+		width:160px;
+	}
+	
+	.vignette-urgente img
+	{
+		width:100%;
+		height:auto;
+	}
+	
+	.float-bar-social
+	{
+		display:none;
+	}
+	
+	.btnConfirm
+	{
+		width: 100%;
+	}
+	
+	.boxsubscribe-login 
+	{
+		float:none;
+		margin-top: 0px;
+		text-align: initial;
+	}
+	
+	.btn-separate-login
+	{
+		float:none;
+		margin-right:0px;
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	
+	.nav
+	{
+		font-size: 13px;
+		text-align: center;
+	}
+	
+	.big-block-gauche 
+	{
+		float: none;
+		width: 90%;
+		margin:5%;
+	}
+	
+	.big-block-droit 
+	{
+		float: none;
+		width: 90%;
+		margin:5%;
+	}
+	
+	.logo 
+	{
+		float: none;
+		padding-top: 8px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.menuMobile
+	{
+		display:block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.user
+	{
+		display:none;
+	}
+	
+	.menu
+	{
+		display:none;
+	}
+	
+	.homeboxleft 
+	{
+		float: none;
+		width: 90%;
+		margin: 5%;
+	}
+	
+	.homeboxcenter 
+	{
+		float: none;
+		width: 90%;
+		margin: 5%;
+	}
+	
+	.homeboxrigth
+	{
+		display:none;
+	}
+	
+	.col3,.col2,.col1,.col4
+	{
+		width: 100%;
+		text-align: center;
+	}
+	
+	.block-annonce 
+	{
+		padding:20px;
+	}
+	
+	.searchtext 
+	{
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+	
+	.categorybox 
+	{
+		width: 100%;
+		margin-bottom:5px;
+	}
+}
+
+@media only screen and (max-width: 640px) 
+{
+	body
+	{
+		font-size: 0.8em;
+	}
+	
+	.border-right 
+	{
+		padding-right: 10px;
+		border-right: 1px solid #dddddd;
+	}
+	
+	.col-70 
+	{
+		margin-top: 20px;
+		float: none;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.col-30 
+	{
+		margin-top: 10px;
+		float: none;
+		width: 100%;
+		box-sizing: border-box;
+		font-size: 13px;
+	}
+	
+	.border-left 
+	{
+		padding-left: 0px;
+	}
+	
+	.iconmaison 
+	{
+		position: absolute;
+		margin-top: -172px;
+		margin-left: 178px;
+		animation: rotate 3s infinite linear;
+	}
+	
+	.iconvoiture 
+	{
+		display:none;
+	}
+	
+	.iconcadeau 
+	{
+		position: absolute;
+		margin-top: -200px;
+		margin-left: 396px;
+		animation: rotateInverse 3s infinite linear;
+	}
+	
+	.input404 
+	{
+		float: none;
+		height: 35px;
+		width: 100%;
+		padding-left: 10px;
+		border: 1px solid #ddd;
+		margin-right: 5px;
+		box-sizing: border-box;
+		margin-bottom: 10px;
+	}
+	
+	.iconmp3 
+	{
+		display:none;
+	}
+	
+	.social-box 
+	{
+		float: none;
+		padding-top: 6px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.social-bar-top 
+	{
+		width: 100%;
+		height: auto;
+		background-color: #404040;
+		overflow: auto;
+		padding-bottom: 5px;
+	}
+	
+	.btnCenterTwo 
+	{
+		width: auto;
+		margin-left: 0px;
+		margin-right: 0px;
+		height: auto;
+		padding-top: 0px;
+		overflow: inherit;
+	}
+	
+	.subscribeBtnConnect
+	{
+		float:none;
+		margin-bottom:25px;
+	}
+	
+	.vignette-urgente
+	{
+		width:140px;
+	}
+	
+	.vignette-urgente img
+	{
+		width:100%;
+		height:auto;
+	}
+	
+	.float-bar-social
+	{
+		display:none;
+	}
+	
+	.btnConfirm
+	{
+		width: 100%;
+	}
+	
+	.boxsubscribe-login 
+	{
+		float:none;
+		margin-top: 0px;
+		text-align: initial;
+	}
+	
+	.btn-separate-login
+	{
+		float:none;
+		margin-right:0px;
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	
+	.nav
+	{
+		font-size: 13px;
+		text-align: center;
+	}
+	
+	.big-block-gauche 
+	{
+		float: none;
+		width: 90%;
+		margin:5%;
+	}
+	
+	.big-block-droit 
+	{
+		float: none;
+		width: 90%;
+		margin:5%;
+	}
+	
+	.container 
+	{
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	
+	.logo 
+	{
+		float: none;
+		padding-top: 8px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.menuMobile
+	{
+		display:block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.user
+	{
+		display:none;
+	}
+	
+	.menu
+	{
+		display:none;
+	}
+	
+	.homeboxleft 
+	{
+		float: none;
+		width: 90%;
+		margin: 5%;
+	}
+	
+	.homeboxcenter 
+	{
+		float: none;
+		width: 90%;
+		margin: 5%;
+	}
+	
+	.homeboxrigth
+	{
+		display:none;
+	}
+	
+	.col3,.col2,.col1,.col4
+	{
+		width: 100%;
+		text-align: center;
+	}
+	
+	.photo
+	{
+		width: 100%;
+		height: auto;
+	}
+	
+	.block-annonce 
+	{
+		padding:20px;
+	}
+	
+	.nav
+	{
+		font-size: 11px;
+		text-align: center;
+	}
+	
+	.big-block-gauche 
+	{
+		float: none;
+		width: 90%;
+		margin:5%;
+	}
+	
+	.big-block-droit 
+	{
+		float: none;
+		width: 90%;
+		margin:5%;
+	}
+	
+	.searchtext 
+	{
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+	
+	.categorybox 
+	{
+		width: 100%;
+		margin-bottom:5px;
+	}
+}
+
+@media only screen and (max-width: 320px) 
+{
+	body
+	{
+		font-size:9px;
+	}
+	
+	.border-right 
+	{
+		padding-right: 10px;
+		border-right: 1px solid #dddddd;
+	}
+	
+	.col-70 
+	{
+		margin-top: 20px;
+		float: none;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.col-30 
+	{
+		margin-top: 10px;
+		float: none;
+		width: 100%;
+		box-sizing: border-box;
+		font-size: 13px;
+	}
+	
+	.border-left 
+	{
+		padding-left: 0px;
+	}
+	
+	.iconmaison 
+	{
+		position: absolute;
+		margin-top: -172px;
+		margin-left: 23px;
+		animation: rotate 3s infinite linear;
+	}
+	
+	.iconvoiture 
+	{
+		display:none;
+	}
+	
+	.iconcadeau 
+	{
+		position: absolute;
+		margin-top: -200px;
+		margin-left: 215px;
+		animation: rotateInverse 3s infinite linear;
+	}
+	
+	.input404 
+	{
+		float: none;
+		height: 35px;
+		width: 100%;
+		padding-left: 10px;
+		border: 1px solid #ddd;
+		margin-right: 5px;
+		box-sizing: border-box;
+		margin-bottom: 10px;
+	}
+	
+	.iconmp3 
+	{
+		display:none;
+	}
+	
+	.social-box 
+	{
+		float: none;
+		padding-top: 6px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.social-bar-top 
+	{
+		width: 100%;
+		height: auto;
+		background-color: #404040;
+		overflow: auto;
+		padding-bottom: 5px;
+	}
+	
+	.btnCenterTwo 
+	{
+		width: auto;
+		margin-left: 0px;
+		margin-right: 0px;
+		height: auto;
+		padding-top: 0px;
+		overflow: inherit;
+	}
+	
+	.subscribeBtnConnect
+	{
+		float:none;
+		margin-bottom:25px;
+	}
+	
+	.vignette-urgente
+	{
+		width: 120px;
+	}
+	
+	.vignette-urgente img
+	{
+		width:100%;
+		height:auto;
+	}
+	
+	.float-bar-social
+	{
+		display:none;
+	}
+	
+	.btnConfirm
+	{
+		width: 100%;
+	}
+	
+	.boxsubscribe-login 
+	{
+		float:none;
+		margin-top: 0px;
+		text-align: initial;
+	}
+	
+	.btn-separate-login
+	{
+		float:none;
+		margin-right:0px;
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	
+	.menuMobile
+	{
+		display:block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	#francemap
+	{
+		margin-top: -60px !important;
+	}
+	
+	.container 
+	{
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	
+	.logo 
+	{
+		float: none;
+		padding-top: 8px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.user
+	{
+		display:none;
+	}
+	
+	.menu
+	{
+		display:none;
+	}
+	
+	.homeboxleft 
+	{
+		float: none;
+		width: 90%;
+		margin: 5%;
+	}
+	
+	.big-block-gauche 
+	{
+		float: none;
+		width: 90%;
+		margin:5%;
+	}
+	
+	.big-block-droit 
+	{
+		float: none;
+		width: 90%;
+		margin:5%;
+	}
+	
+	.col3,.col2,.col1,.col4
+	{
+		width: 100%;
+		text-align: center;
+	}
+	
+	.nav
+	{
+		font-size: 9px;
+		text-align: center;
+	}
+	
+	.homeboxcenter 
+	{
+		float: none;
+		width: 90%;
+		margin: 5%;
+	}
+	
+	.homeboxrigth
+	{
+		display:none;
+	}
+	
+	.photo
+	{
+		width: 100%;
+		height: auto;
+	}
+	
+	.block-annonce 
+	{
+		padding:20px;
+	}
+	
+	.searchtext 
+	{
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom:5px;
+	}
+	
+	.categorybox 
+	{
+		width: 100%;
+		margin-bottom:5px;
+	}
+	
+	.col4 
+	{
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+}

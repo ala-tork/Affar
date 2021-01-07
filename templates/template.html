@@ -1,0 +1,58 @@
+
+<!-- Mirrored from www.shua-creation.com/clone/pas/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Nov 2020 18:37:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>AFFAR TN</title>
+    <meta name="Description" content="PAS Script est un script de petite annonces en PHP pour créer votre site de petite annonces facilement">
+    <meta name="publisher" content="PAS Script">
+    <meta name="copyright" content="www.shua-creation.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/main.css') }} ">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/responsive.css') }}" >
+	<script src="static/js/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	
+ 
+
+</head>
+		<style>
+		#francemap
+		{
+			margin-top: 0px !important;
+		}
+		@media only screen and (max-width: 960px) 
+		{
+			#francemap
+			{
+				margin-top: 0px !important;
+			}
+		}
+		@media only screen and (max-width: 640px) 
+		{
+			#francemap
+			{
+				margin-top: -220px !important;
+			}
+		}
+		@media only screen and (max-width: 320px) 
+		{
+			#francemap
+			{
+				margin-top: 0px !important;
+			}
+		}
+        </style>
+        
+		<body>
+<header>	<div class="container">		<a href="/">			<div class="logo">				<img src="../static/images/tunis.png" alt="MARCHECONCLU">			</div>		</a>		<div class="user">	 {% if session.log %}	 <a href="/edit_user1?id={{ session.id }}" class="btnConnect user-icon">&nbsp;&nbsp;&nbsp;&nbsp; Mon Compte</a> &emsp; <a href="/chatting/{{session.id}}" class="btnConnect msg-icon">&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Messages </a> &emsp; <a href="/logout" class="btnConnect subscribe-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deconnexion </a> 
+ {% else %} <a href="/login" class="btnConnect user-icon">&nbsp;&nbsp;&nbsp;&nbsp; Connexion</a> &emsp; <a href="/subscribe" class="btnConnect subscribe-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inscription</a>  {% endif %}
+		</div>	</div></header><div class="colorbackmenu">	<div class="container">		<div class="menu">		<ul>  <li><a href="/deposerAnnonce">DEPOSER UNE ANNONCE</a></li> <li><a href="/offre">OFFRES</a></li><li><a href="/mesannonces">MES ANNONCES</a></li><li><a href="/favoris.html">MES FAVORIS</a></li>        </ul>		</div>	</div></div><div class="menuMobile"><a href="javascript:void(0);" onclick="openMobileMenu();"><img src="images/menu-mobile-icon.png"></a></div><div class="menuMobileVolet" id="menuMobileVolet"><ul><li><a href="deposer-une-annonce.html">DEPOSER UNE ANNONCE</a></li><li><a href="offre.html">OFFRES</a></li><li><a href="demande.html">DEMANDES</a></li><li><a href="mesannonces.html">MES ANNONCES</a></li><li><a href="boutique.html">BOUTIQUE</a></li><li><a href="favoris.html">MES FAVORIS</a></li><li><a href="subcribe.html">INSCRIPTION</a></li><li><a href="login.html">CONNEXION</a></li></ul></div><script>var openmenumobile = false;function openMobileMenu(){$('#menuMobileVolet').toggle('slow');}</script>	
+		{% include 'includes/_message.html' %}
+            {% block body %}  
+            {% endblock %}
+            
+
+           
+           

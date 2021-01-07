@@ -1,0 +1,51 @@
+
+{% block body %}
+
+{% include 'template.html' %}
+
+</div>
+<div class="container topMargin">
+
+<H1>Update Compte  !</H1>
+<p>
+tu peux modifier votre compte 
+</p>
+{% from "includes/_formhelpers.html" import render_field %}
+
+    <form method="POST" action="{{ url_for('update') }}" >
+        {% for user in result %}       
+            <input type="text" name="pseudo" class="inputbox"  value='{{ user.pseudo}}'/>
+            
+            <br><br>
+       
+            <input type="text" name="email" class="inputbox"  value="{{ user.email}}"/>
+      
+            <br><br>
+     
+            <input type="text" name="password" class="inputbox"  value="{{ user.password}}"/>
+     
+            <br><br>
+        
+            <input type="text" name="confirm" class="inputbox"  value="{{ user.password}}"/>
+            <br><br>
+
+            <div class="form-row">
+                <input type="text" name="phone" class="inputbox"  value="{{ user.phone}}"/>
+              </div>
+      <br><br><br>
+      
+
+        <p>
+            <input type="submit" value="edit ce compte" class="btnConfirm">
+        </p>
+        {% endfor %}
+    </form>
+ 
+    </div>
+</form>
+</div>
+</body>
+
+{% include 'footer.html' %}
+{% endblock %}
+</html>

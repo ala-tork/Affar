@@ -1,0 +1,50 @@
+
+{% block body %}
+
+{% include 'template.html' %}
+
+</div>
+<div class="container topMargin">
+
+<H1>S'inscrire  !</H1>
+<p>
+il vous suffit de remplir tous les champs du formulaire ci-dessous, puis Rendez vous
+dans votre messagerie pour activer votre compte en cliquant sur le lien envoyé.
+</p>
+{% from "includes/_formhelpers.html" import render_field %}
+    <form method="POST" action="" >
+    
+            {{render_field(form.pseudo, class_="inputbox")}}
+            
+            <br><br>
+       
+            {{render_field(form.email, class="inputbox")}}
+      
+            <br><br>
+     
+            {{render_field(form.password, class="inputbox")}}
+     
+            <br><br>
+        
+            {{render_field(form.confirm, class="inputbox")}}
+            <br><br>
+
+            <div class="form-row">
+            {{render_field(form.phone, class="inputbox" )}}
+              </div>
+      <br><br><br>
+
+
+        <p>
+            <input type="submit" value="Créer mon compte" class="btnConfirm">
+        </p>
+    </form>
+    
+    </div>
+</form>
+</div>
+</body>
+
+{% include 'footer.html' %}
+{% endblock %}
+</html>

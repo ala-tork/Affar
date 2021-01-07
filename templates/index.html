@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Retrouver les offres de votre région sur le Script PAS PHP</title>
+<meta name="Description" content="Retrouver l'ensemble des offres proposer en fonction de votre région, consulter le petite annonce du Script PAS PHP">
+<meta name="publisher" content="PAS Script">
+<meta name="copyright" content="www.shua-creation.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="https://www.shua-creation.com/clone/pas/template/viva/css/main.css">
+<link rel="stylesheet" type="text/css" href="https://www.shua-creation.com/clone/pas/template/viva/css/responsive.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<meta property="og:url" content="https://www.shua-creation.com/clone/pas/clone/pas/offre.php" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Découvrez les offres et petite annonces du script PAS Script" />
+<meta property="og:description" content="PAS Script est un script de petite annonce en PHP complétement paramètrable" />
+<meta property="og:image" content="https://www.shua-creation.com/clone/pas/images/2d5fcd4febb2667c2c9c281071f527e7.jpg" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://www.shua-creation.com/clone/pas/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://www.shua-creation.com/clone/pas/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://www.shua-creation.com/clone/pas/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://www.shua-creation.com/clone/pas/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://www.shua-creation.com/clone/pas/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://www.shua-creation.com/clone/pas/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://www.shua-creation.com/clone/pas/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.shua-creation.com/clone/pas/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.shua-creation.com/clone/pas/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://www.shua-creation.com/clone/pas/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.shua-creation.com/clone/pas/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://www.shua-creation.com/clone/pas/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.shua-creation.com/clone/pas/favicon/favicon-16x16.png">
+<meta name="google-site-verification" content="test" />
+<meta name="msvalidate.01" content="test" />
+<meta name="p:domain_verify" content="test"/><script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+"palette": {
+"popup": {
+"background": "#1d8a8a"
+},
+"button": {
+"background": "#62ffaa"
+}
+},
+"theme": "classic",
+"position": "bottom",
+"type": "opt-in",
+"content": {
+"message": "",
+"allow": "J’accepte",
+"dismiss": "Refuser",
+"link": "En savoir plus",
+"href": "https://www.shua-creation.com/clone/pas/cookie.php"
+}
+})});
+</script>
+</head>
+		<style>
+		#francemap
+		{
+			margin-top: 0px !important;
+		}
+		@media only screen and (max-width: 960px) 
+		{
+			#francemap
+			{
+				margin-top: 0px !important;
+			}
+		}
+		@media only screen and (max-width: 640px) 
+		{
+			#francemap
+			{
+				margin-top: -220px !important;
+			}
+		}
+		@media only screen and (max-width: 320px) 
+		{
+			#francemap
+			{
+				margin-top: 0px !important;
+			}
+		}
+		</style>
+		<body>
+<header>	<div class="container">		<a href="https://www.shua-creation.com/clone/pas">			<div class="logo">				<img src="https://www.shua-creation.com/clone/pas/images/4dacdcdf9f64db43d159ba905cbf2dbe.jpg" alt="Business Guadeloupe.fr">			</div>		</a>		<div class="user">		<a href="https://www.shua-creation.com/clone/pas/login.php" class="btnConnect user-icon">&nbsp;&nbsp;&nbsp;&nbsp; Connexion</a>
+<a href="https://www.shua-creation.com/clone/pas/subscribe.php" class="btnConnect subscribe-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inscription</a>
+		</div>	</div></header><div class="colorbackmenu">	<div class="container">		<div class="menu">		<ul><li><a href="https://www.shua-creation.com/clone/pas/deposer-une-annonce.php">DEPOSER UNE ANNONCE</a></li><li><a href="https://www.shua-creation.com/clone/pas/offre.php">OFFRES</a></li><li><a href="https://www.shua-creation.com/clone/pas/demande.php">DEMANDES</a></li><li><a href="https://www.shua-creation.com/clone/pas/mesannonces.php">MES ANNONCES</a></li><li><a href="https://www.shua-creation.com/clone/pas/boutique.php">BOUTIQUE</a></li><li><a href="https://www.shua-creation.com/clone/pas/favoris.php">MES FAVORIS</a></li></ul>		</div>	</div></div><div class="menuMobile"><a href="javascript:void(0);" onclick="openMobileMenu();"><img src="https://www.shua-creation.com/clone/pas/images/menu-mobile-icon.png"></a></div><div class="menuMobileVolet" id="menuMobileVolet"><ul><li><a href="https://www.shua-creation.com/clone/pas/deposer-une-annonce.php">DEPOSER UNE ANNONCE</a></li><li><a href="https://www.shua-creation.com/clone/pas/offre.php">OFFRES</a></li><li><a href="https://www.shua-creation.com/clone/pas/demande.php">DEMANDES</a></li><li><a href="https://www.shua-creation.com/clone/pas/mesannonces.php">MES ANNONCES</a></li><li><a href="https://www.shua-creation.com/clone/pas/boutique.php">BOUTIQUE</a></li><li><a href="https://www.shua-creation.com/clone/pas/favoris.php">MES FAVORIS</a></li><li><a href="https://www.shua-creation.com/clone/pas/subcribe.php">INSCRIPTION</a></li><li><a href="https://www.shua-creation.com/clone/pas/login.php">CONNEXION</a></li></ul></div><script>var openmenumobile = false;function openMobileMenu(){$('#menuMobileVolet').toggle('slow');}</script>	<div class="float-bar-social">
+	<div class="social-box-normal">
+<a href="https://www.facebook.com/" target="newpage">
+<div class="social-box-container"><img src="https://www.shua-creation.com/clone/pas/images/facebook.png" alt="Visiter notre page Facebook">
+</div>
+</a>
+<a href="https://api.whatsapp.com/send?phone=" target="newpage">
+<div class="social-box-container">
+<img src="https://www.shua-creation.com/clone/pas/images/whatsapp.png" alt="Contacter nous sur Whatsapp">
+</div>
+</a>
+</div>
+	</div>
+	<div class="container topMargin">
+	<div class="ads728">
+		{publicite_offre}
+	</div>
+	<H1>Annonces : Offres</H1>
+	<div class="search-section-box">
+		<div class="search-input">
+			<form>
+				<input class="searchtext" type="text" name="searchtext" value="" placeholder="Que recherchez-vous ?">
+				<select name="categorie" id="categorie" onchange="checkCategorie();" class="categorybox">
+				<option value="0" selected>Toutes les catégories</option>
+<option value="69" disabled style="background-color:#aaaaaa;color:#ffffff;">AUTRES</option>
+<option value="70">Autres</option>
+<option value="1" disabled style="background-color:#aaaaaa;color:#ffffff;">Emploi</option>
+<option value="76">Occasions</option>
+<option value="2">Offres d'emploi</option>
+<option value="12" disabled style="background-color:#aaaaaa;color:#ffffff;">IMMOBILIER</option>
+
+				</select>
+				<select name="departement" class="categorybox"><option value="">Toutes la France</option>
+<option value="01">01 - Ain</option>
+<option value="02">02 - Aisne</option>
+<option value="03">03 - Allier</option>
+
+</select>
+				<select name="tri" class="categorybox"><option value="plus_recente">Tri : Plus récentes</option><option value="plus_ancienne">Tri : Plus ancienne</option><option value="prix_croissant">Tri : Prix croissants</option><option value="prix_decroissant">Tri : Prix décroissants</option></select>
+				<input type="submit" value="Rechercher" class="blueBtn nodisplay searchIcon">
+				<div id="filtre">
+				</div>
+			</form>
+		</div>
+	</div>
+	<script>
+	function checkCategorie()
+	{
+		var categorie = $('#categorie').val();
+		$('#filtre').load('module/checkOffre.php?categorie='+categorie);
+	}
+	</script>
+	<a href="showannonce.php?md5=936ebde1dda7834153d7b0870c9f61b9" class="linkoffre">	<div class="block-annonce">				<div class="photo">			<img src="images/noimage.jpg">			<div class="nbr-photo">0</div>		</div>		<div class="text-block-annonce">			<div class="title-block-annonce">a50</div>		<div>			Téléphonie<br>			Alsace		</div>		<div class="prix-block-annonce">980 €</div>		</div>		<div class="date-depot-annonce">26/12/2020 001200</div>	</div></a><div class="favoris-block-annonce"><img src="https://www.shua-creation.com/clone/pas/images/coeur-vide.png" id="favoris-936ebde1dda7834153d7b0870c9f61b9" title="Mettre en favoris" onclick="addFavoris('936ebde1dda7834153d7b0870c9f61b9');"></div><a href="showannonce.php?md5=00a533e4483ddab04d8a2a74b794b4da" class="linkoffre">	<div class="block-annonce">				<div class="photo">			<img src="images/annonce/66cd5a54f89e84faec3f6138f5652a2f-thumb.jpg">			<div class="nbr-photo">1</div>		</div>		<div class="text-block-annonce">			<div class="title-block-annonce">voiture</div>		<div>			Voitures<br>			Picardie		</div>		<div class="prix-block-annonce">10 000 €</div>		</div>		<div class="date-depot-annonce">26/12/2020 000300</div>	</div></a><div class="favoris-block-annonce"><img src="https://www.shua-creation.com/clone/pas/images/coeur-vide.png" id="favoris-00a533e4483ddab04d8a2a74b794b4da" title="Mettre en favoris" onclick="addFavoris('00a533e4483ddab04d8a2a74b794b4da');"></div>
+	<div class="paging">
+<a href="offre.php?page=0&categorie=&searchtext=&departement=&tri=plus_recente&codepostal=&region=" class="paging-blue"><</a><a href="offre.php?page=0&categorie=&searchtext=&departement=&tri=plus_recente&codepostal=&region=" class="paging-blue pageselected">1</a>
+<a href="offre.php?page=1&categorie=&searchtext=&departement=&tri=plus_recente&codepostal=&region=" class="paging-blue">></a></div>
+
+</div>
+<script>
+function addFavoris(md5)
+{
+	document.location.href = 'https://www.shua-creation.com/clone/pas/addfavoris.php?md5='+md5;
+}
+
+function removeFavoris(md5)
+{
+	document.location.href = 'https://www.shua-creation.com/clone/pas/removefavoris.php?md5='+md5;
+}
+</script>
+
+</body>
+</html>
